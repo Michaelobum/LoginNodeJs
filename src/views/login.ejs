@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Form</title>
+        <style>
+            /* Estilos para el formulario */
+            form {
+            width: 300px;
+            margin: 50px auto;
+            padding: 50px;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            }
+            /* Estilos para el título */
+            h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            }
+            /* Estilos para los campos de entrada */
+            input[type='text'], input[type='password'] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            }
+            /* Estilos para el botón */
+            button {
+            width: 100%;
+            padding: 14px 20px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            }
+            /* Estilos adicionales */
+            .container {
+            text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/welcomes" method="post">
+        <div class="container">
+            <h2>Login Form</h2>
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Ingresa el usuario" name="usuario" required>
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Ingresa la contraseña" name="contraseña" required>
+            <button type="submit">Login</button>
+        </div>
+        <a href="/welcomes">Registrar Usuario</a>
+        </form>
+    </body>
+</html>
+
