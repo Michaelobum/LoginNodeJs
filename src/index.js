@@ -23,9 +23,11 @@ app.use (myconnection(mysql, {
   database: 'crudnodejs'
 }, 'single'));
 //rutas del servidor
-app.use(customerRoutes);
+app.use('/', customerRoutes);
+
 //staticfiles SIRVE PARA DARLE MAS SAZÓN A LA PÁGINA
-app.use (express.static(path.join(__dirname, 'public' )));
+app.use (express.static(path.join(__dirname, 'public',  )));
+app.use('/data_lib', express.static(path.join(__dirname, 'data_lib')));
 //sirve para poner a escuchar al servidor
 app.listen(app.get ('port'),() => {
    console.log('Server started on http://localhost:3000');
